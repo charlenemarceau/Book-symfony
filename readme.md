@@ -27,3 +27,6 @@ DATABASE_URL="mysql://root:@127.0.0.1:3306/db_books_eyrolles"
 #depuis le terminal 
 symfony console doctrine:database:create
 ``` 
+Taper l'adresse :
+http://localhost:8000/book
+>> on arrive sur le bon controller qui lance sa vue.
