@@ -10,6 +10,8 @@
                 <p>{{ book.resume }}</p>
                 <p>Parution {{book.parution|date("d/m/Y") }}</p>
                 <p>Prix : {{ book.prix }}</p>
+                {# <a href="/">Retour</a> #}
+                <a href="{{path('app_book')}}"> Retour</a>
             </div>
     </div>
 </div>

@@ -9,8 +9,8 @@
                 {{ book.title}}
                 <img src="{{ asset('images/' ~ book.cover )}}" alt="">
                 <p>Parution {{book.parution|date("d/m/Y") }}</p>
-                <a href=""></a>
-                <a href="/detail/{{book.id}}">Afficher le détail</a>
+                <a href="{{path('app_book_detail', {'id':book.id } )}}">Afficher le détail</a> 
+                {# <a href="/detail/{{book.id}}">Afficher le détail</a> #}
             </div>
         {% endfor %}
     </div>
