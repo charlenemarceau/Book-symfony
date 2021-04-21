@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 class="text-center mt-5">Les meilleures ventes</h1>
+<div class="container">
+    <div class="row mt-5 text-center font-weight-bold">
+        {% for book in books %}
+            <div class="col-4">
+                {{ book.title}}
+                <img src="{{ asset('images/' ~ book.cover )}}" alt="">
+                <p>Parution {{book.parution|date("d/m/Y") }}</p>
+                <a href=""></a>
+                <a href="/detail/{{book.id}}">Afficher le détail</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

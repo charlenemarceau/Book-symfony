@@ -1,7 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello BookController!{% endblock %}
+{% block title %} {{ parent() }} Home {% endblock %}
 
 {% block body %}
-    <h1>Hello!</h1>
+    {% for d in data %}
+        {% if loop.index0 == 0 %}
+            <p style='color:SeaGreen'>{{ d.name }} {{ d.action }} </p>
+        {% else %}
+            <p style='color:YellowGreen'>{{ d.name }} {{ d.action }} </p>
+        {% endif %} 
+    {% endfor %}  
 {% endblock %}
+
+{% block stylesheets %}
+            {#{{ encore_entry_link_tags('app') }}#}
+            
+        {% endblock %}
